@@ -1,0 +1,193 @@
+/* About Page Specific Styles */
+
+/* About Content Section */
+.about-content-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.about-text {
+  padding: 20px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.about-mission {
+  margin-bottom: 60px;
+}
+
+.about-mission h2 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.mission-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mission-card h3 {
+  color: #0066cc;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.mission-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.about-team {
+  margin-bottom: 60px;
+}
+
+.about-team h2 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.team-member {
+  text-align: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  color: #666;
+  font-style: italic;
+}
+
+/* Contact Section */
+.about-contact {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-contact h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-contact p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  margin-bottom: 30px;
+}
+
+.contact-details p {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact-details i {
+  color: #0066cc;
+  margin-right: 10px;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+  .about-grid, .mission-grid, .team-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .about-text h2, .about-mission h2, .about-team h2, .about-contact h2 {
+      font-size: 28px;
+  }
+
+  .about-text p, .mission-card p, .team-member p, .about-contact p {
+      font-size: 14px;
+  }
+
+  .team-member img {
+      width: 120px;
+      height: 120px;
+  }
+
+  .mission-card, .team-member {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h2, .about-mission h2, .about-team h2, .about-contact h2 {
+      font-size: 24px;
+  }
+
+  .about-text p, .mission-card p, .team-member p, .about-contact p {
+      font-size: 12px;
+  }
+
+  .team-member img {
+      width: 100px;
+      height: 100px;
+  }
+
+  .mission-card, .team-member {
+      padding: 15px;
+  }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>JiboCars - Premium Car Rental</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><img src="assetppp/jibo logo1.png" alt="JiboCars Logo"></a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="about.html">About</a></li>
+                
+                </ul>
+                <i class="fas fa-times nav-close" onclick="toggleMenu()"></i>
+            </div>
+            <i class="fas fa-bars nav-toggle" onclick="toggleMenu()"></i>
+        </nav>
+        <div class="hero-content">
+            <h1>Rent Your Perfect Ride Today</h1>
+            <p>Premium cars for every journey - comfort guaranteed</p>
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2>Find Your Vehicle</h2>
+            <form id="booking-form" class="booking-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Pickup Date & Time</label>
+                        <input type="date" id="pickup-date" required>
+                        <input type="time" id="pickup-time" min="08:00" max="22:00" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Return Date & Time</label>
+                        <input type="date" id="return-date" required>
+                        <input type="time" id="return-time" min="08:00" max="22:00" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pickup Location</label>
+                        <select id="pickup-location" required>
+                            <option value="">Select Location</option>
+                            <optgroup label="Nigeria">
+                                <option value="lagos-airport">Lagos Airport</option>
+                                <option value="lagos-downtown">Lagos Downtown</option>
+                                <option value="delta">Delta State</option>
+                            </optgroup>
+                            <optgroup label="Ghana">
+                                <option value="accra-airport">Accra Airport</option>
+                                <option value="accra-downtown">Accra Downtown</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Vehicle Type</label>
+                        <select id="car-type" required>
+                            <option value="">Select Type</option>
+                            <option value="Toyota  Prado 2023">Toyota  Prado 2023 ($95/day)</option>
+                            <option value="Toyota Land Cruiser 2023">Toyota Land Cruiser 2023 ($145/day)</option>
+                            <option value="Lexus LX 2021">Lexus LX 2021 ($120/day)</option>
+                            <option value="Lexus LX 2023">Lexus LX 2023 ($150/day)</option>
+                            <option value="Hixus 2023">Hixus 2023 ($110/day)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="calculate-btn" class="btn btn-secondary">Calculate</button>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </div>
+                <div class="price-estimate" id="price-estimate">
+                    <span>Estimated Price: </span>
+                    <span id="price-display">$0.00</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured Vehicles -->
+    <section id="vehicles" class="vehicles-section">
+        <h2>Featured Vehicles</h2>
+        <div class="vehicles-grid">
+            <div class="vehicle-card" data-aos="fade-up">
+                <img src="assetppp/toyota prado.jpg" alt="Economy Car">
+                <div class="vehicle-info">
+                    <h3>Toyota  Prado 2023</h3>
+                    <p>$95/day</p>
+                    <a href="#" class="btn btn-outline">View Details</a>
+                </div>
+            </div>
+            <div class="vehicle-card" data-aos="fade-up">
+                <img src="assetppp/land cruiser.jpg" alt="SUV">
+                <div class="vehicle-info">
+                    <h3>land cruiser</h3>
+                    <p>$145/day</p>
+                    <a href="#" class="btn btn-outline">View Details</a>
+                </div>
+            </div>
+            <div class="vehicle-card" data-aos="fade-up">
+                <img src="assetppp/LEX 2023.jpg" alt="Luxury Car">
+                <div class="vehicle-info">
+                    <h3>Lexus LX 2023 </h3>
+                    <p>$150/day</p>
+                    <a href="#" class="btn btn-outline">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+       <!-- About Section -->
+       <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2>About JiboCars</h2>
+                    <p>We provide premium car rental services with a diverse fleet ranging from economy to luxury vehicles. Our mission is to deliver comfort, reliability, and exceptional customer service for every journey.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="assetppp/luzz.jpg" alt="About JiboCars">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <h3>24/7 Customer Support</h3>
+                    <p>Our dedicated customer service team is available around the clock to assist you with any queries or concerns. We're committed to ensuring your rental experience is smooth and enjoyable from start to finish.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up">
+                    <h3>Flexible Rental Plans</h3>
+                    <p>Whether you need a car for a few hours, days, or weeks, our flexible rental plans can be tailored to suit your specific requirements and budget. No hidden fees or unexpected charges.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up">
+                    <h3>Free Delivery & Pickup</h3>
+                    <p>We offer complimentary vehicle delivery and pickup services within city limits for rentals over 3 days. Save time and start your journey with convenience right from your doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card" data-aos="fade-up">
+                    <p>"JiboCars provided me with an excellent car and amazing service for my business trip. Will definitely use again!"</p>
+                    <h3>Michael ogechi</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-card" data-aos="fade-up">
+                    <p>"The booking process was incredibly smooth, and the car was in perfect condition. Great value for money!"</p>
+                    <h3> Williams jojo </h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assetppp/jibo logo1.png" alt="JiboCars Logo">
+                    <p>© 2025 JiboCars. All Rights Reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="vehicles.html">Vehicles</a></li>
+                        <li><a href="about.html">About</a></li>
+                
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/jibocarslimited/"><i class="fab fa-instagram"></i></a>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="jibo.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* Vehicles Page Specific Styles */
+
+/* Vehicles Content Section */
+.vehicles-content-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.vehicles-filter {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.vehicles-filter select {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vehicle-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 400px; /* Increased height for more content */
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 60%; /* Reduced to accommodate more text */
+    object-fit: cover;
+}
+
+.vehicle-info {
+    padding: 20px;
+    text-align: center;
+    height: 40%; /* Increased to accommodate more text */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vehicle-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.vehicle-info p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.vehicle-info .price {
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design for Vehicles Page */
+@media (max-width: 768px) {
+    .vehicles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-card {
+        height: 350px;
+    }
+
+    .vehicle-card img {
+        height: 60%;
+    }
+
+    .vehicle-info h3 {
+        font-size: 20px;
+    }
+
+    .vehicle-info p {
+        font-size: 14px;
+    }
+
+    .vehicle-info .price {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vehicles-filter select {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .vehicle-card {
+        height: 300px;
+    }
+
+    .vehicle-card img {
+        height: 50%;
+    }
+
+    .vehicle-info h3 {
+        font-size: 18px;
+    }
+
+    .vehicle-info p {
+        font-size: 12px;
+    }
+
+    .vehicle-info .price {
+        font-size: 16px;
+    }
+}

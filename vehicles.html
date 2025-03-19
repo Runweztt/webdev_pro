@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>JiboCars - Our Vehicles</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="vehicles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="home.html"><img src="assetppp/jibo logo1.png" alt="JiboCars Logo"></a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <i class="fas fa-times nav-close" onclick="toggleMenu()"></i>
+            </div>
+            <i class="fas fa-bars nav-toggle" onclick="toggleMenu()"></i>
+        </nav>
+        <div class="hero-content">
+            <h1>Our Vehicle Fleet</h1>
+            <p>Explore our premium cars for every need</p>
+        </div>
+    </header>
+
+    <!-- Vehicles Content Section -->
+    <section class="vehicles-content-section">
+        <div class="container">
+            <div class="vehicles-filter" data-aos="fade-up">
+                <select id="vehicle-filter" onchange="filterVehicles()">
+                    <option value="all">All Vehicles</option>
+                    <option value="Toyota  Prado 2023">Toyota  Prado 2023</option>
+                    <option value="Land Cruiser">Land Cruiser</option>
+                    <option value="Lexus LX 2021">Lexus LX 2021</option>
+                    <option value="Lexus LX 2023">Lexus LX 2023</option>
+                    <option value="vehicles-grid">Hixus 2023</option>
+                </select>
+            </div>
+
+            <div class="vehicles-grid">
+                <div class="vehicle-card economy" data-aos="fade-up">
+                    <img src="assetppp/toyota prado.jpg" alt="Economy Car">
+                    <div class="vehicle-info">
+                        <h3>Toyota  Prado 2023</h3>
+                        <p>  Ideal for city driving with comfortable seating and easy parking.</p>
+                        <p class="price">$95/day</p>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="vehicle-card compact" data-aos="fade-up">
+                    <img src="assetppp/2020.jpg" alt="Compact Car">
+                    <div class="vehicle-info">
+                        <h3>Toyota Prado 2020</h3>
+                        <p>Perfect for budget-friendly travel with great fuel efficiency.</p>
+                        <p class="price">$100/day</p>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="vehicle-card midsize" data-aos="fade-up">
+                    <img src="assetppp/land cruiser.jpg" alt="Midsize Car">
+                    <div class="vehicle-info">
+                        <h3>Toyota Land Cruiser 2023</h3>
+                        <p>Spacious and versatile for families or longer trips.</p>
+                        <p class="price">$145/day</p>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="vehicle-card suv" data-aos="fade-up">
+                    <img src="assetppp/LEXUS.jpg" alt="SUV">
+                    <div class="vehicle-info">
+                        <h3>Lexus LX 2021</h3>
+                        <p>Rugged and spacious for adventure and family outings.</p>
+                        <p class="price">$120/day</p>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="vehicle-card luxury" data-aos="fade-up">
+                    <img src="assetppp/20221031123405_LX500d_front_quarter.jpg" alt="Luxury Car">
+                    <div class="vehicle-info">
+                        <h3>Lexus LX 2023</h3>
+                        <p>Premium comfort and style for special occasions and business travel.</p>
+                        <p class="price">$150/day</p>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="vehicle-card luxury" data-aos="fade-up">
+                    <img src="assetppp/HIXUS.jpg" alt="Luxury Car">
+                    <div class="vehicle-info">
+                        <h3>Hixus 2023</h3>
+                        <p>for Security,special occasions and  travel.</p>
+                        <p class="price">$110/day</p>
+                        <a href="#booking" class="btn btn-primary">Book Now</a>
+                    </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assetppp/jibo logo1.png" alt="JiboCars Logo">
+                    <p>© 2025 JiboCars. All Rights Reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="vehicles.html">Vehicles</a></li>
+                        <li><a href="about.html">About</a></li>
+    
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        
+                        <a href="https://www.instagram.com/jibocarslimited/"><i class="fab fa-instagram"></i></a>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        function filterVehicles() {
+            const filter = document.getElementById('vehicle-filter').value;
+            const cards = document.querySelectorAll('.vehicle-card');
+            
+            cards.forEach(card => {
+                if (filter === 'all' || card.classList.contains(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
